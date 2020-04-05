@@ -4,12 +4,12 @@ library(ggplot2)
 ?mpg
 
 # simple plot
-ggplot(mpg, aes( x = cty, y = hwy)) + 
+ggplot(mpg, aes( cty, hwy)) + 
   geom_point() +
   ggtitle("city miles per gallon vs highway miles per gallon")
 
 # adding engine displacement and manufacturer to the graph
-ggplot(mpg, aes( x = cty, y = hwy)) + 
+ggplot(mpg, aes( cty, hwy)) + 
   geom_point( aes( size = displ, colour = manufacturer)) +
   ggtitle("city miles per gallon vs  highway miles per gallon\nwith extra information")
 
